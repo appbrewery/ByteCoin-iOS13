@@ -8,13 +8,34 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UIPickerViewDataSource {
+    
+// outlets
+    @IBOutlet weak var bitcoinLabel: UILabel!
+    @IBOutlet weak var currencyLabel: UILabel!
+    @IBOutlet weak var currencyPicker: UIPickerView!
+    
+    
+    // connect to coinManager struct:
+    let coinManager = CoinManager()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        currencyPicker.dataSource = self
     }
 
+    // stubs from UIPickerViewDataSource
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        // number of columns in the picker
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        // number of rows in picker = number of availabel currency
+        return coinManager.currencyArray.count
+    }
 
 }
 
