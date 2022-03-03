@@ -47,7 +47,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     // set what happen if I tap one of the currency in pickerView
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         // this is what happen if I select a row in pickerView
-        print(coinManager.currencyArray[row])
+        let selectedCoin = coinManager.currencyArray[row]
+        coinManager.getCoinPrice(for: selectedCoin)
     }
 
 }
