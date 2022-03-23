@@ -10,6 +10,7 @@ import Foundation
 
 // this file we eill create a struct that represent decodable JSON data type
 
-struct CoinData: Codable {
+struct CoinData: Decodable {
+    let asset_id_quote: String
     let rate: Double
 }
