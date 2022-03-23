@@ -46,4 +46,19 @@ struct CoinManager {
             print(dataString ?? "none")
         }
     }
+    
+    func parseJSON(coinData: Data) {
+        // this will parse the incoming JSON data from the coinAPI server
+        let decoder = JSONDecoder()
+        
+        do {
+            // try to decode the JSON formatted data
+            let decodedData = try decoder.decode(CoinData.self, from: coinData)
+            // for test purposes just print it for now
+            print(decodedData.rate)
+        } catch {
+            // if error caught for now just print it
+            print(error)
+        }
+    }
 }
