@@ -10,7 +10,7 @@ Welcome to ByteCoin-iOS13, an iOS app designed to provide real-time price inform
 - **Real-time Data:** Stay updated with the latest cryptocurrency prices.
 - **Intuitive UI:** User-friendly design for easy navigation and information retrieval.
 
-![ByteCoin Screen1](./Images/Img0/.png)
+![ByteCoin Screen1](Images/Img0.png)
 ![ByteCoin Screen2](./Img1/.png)
 ![ByteCoin Screen3](./Img3/.png)
 
